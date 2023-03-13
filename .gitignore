@@ -1,0 +1,13 @@
+.vs
+Poc.Ecare.Infrastructure/bin
+Poc.Ecare.Infrastructure/obj
+Poc.Ecare.Domain/bin
+Poc.Ecare.Domain/obj
+Poc.Ecare.UnitOfWork/bin
+Poc.Ecare.UnitOfWork/obj
+Pro.Ecare.Business/bin
+Pro.Ecare.Business/obj
+Poc.Ecare.Server/bin
+Poc.Ecare.Server/obj
+Poc.Ecare.Server.Test/bin
+Poc.Ecare.Server.Test/obj
