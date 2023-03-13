@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Poc.Ecare.Server.Test.RepositoriesTests
+namespace Poc.Ecare.Server.Test.DatabaseConnectionTests
 {
     public class OracleConnectionTest
     {

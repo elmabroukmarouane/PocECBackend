@@ -17,8 +17,12 @@ namespace Poc.Ecare.Server.Controllers
 {
     public class UserController : GenericController<User, UserViewModel>
     {
+        #region ATTRIBUTES
         private readonly IAuthenticationService _authenticationService;
         private readonly IRealTimeHub _realTimeHub;
+        #endregion
+
+        #region CONTRUCTOR
         public UserController(
             IGenericService<User> genericService,
             IMapper mapper,
@@ -30,11 +34,15 @@ namespace Poc.Ecare.Server.Controllers
             _authenticationService = authenticationService ?? throw new ArgumentException(nameof(authenticationService));
             _realTimeHub = realTimeHub ?? throw new ArgumentException(nameof(_realTimeHub));
         }
+        #endregion
 
+        #region ENDPOINTS
+        [HttpGet]
         public async Task GetConnectedUsers()
         {
             var ConnectedUsersCount = await _authenticationService.GetConnectedUsers();
             await _realTimeHub.GetConnectedUsersList(ConnectedUsersCount);
         }
+        #endregion
     }
 }
