@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Poc.Ecare.UnitOfWork", "Poc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pro.Ecare.Business", "Pro.Ecare.Business\Pro.Ecare.Business.csproj", "{B2C9E114-5D20-4DDE-BB35-EA20CF1E6D39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poc.Ecare.Server.Test", "Poc.Ecare.Server.Test\Poc.Ecare.Server.Test.csproj", "{991F9D89-2F9F-4182-8C8F-717EF0D3A823}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Poc.Ecare.Server.Test", "Poc.Ecare.Server.Test\Poc.Ecare.Server.Test.csproj", "{991F9D89-2F9F-4182-8C8F-717EF0D3A823}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -48,7 +48,9 @@ namespace Poc.Ecare.Server.RealTime.Hubs.Classe
             }
         }
 
+#pragma warning disable CS8632 // L'annotation pour les types référence Nullable doit être utilisée uniquement dans le code au sein d'un contexte d'annotations '#nullable'.
         public override Task OnDisconnectedAsync(Exception? exception)
+#pragma warning restore CS8632 // L'annotation pour les types référence Nullable doit être utilisée uniquement dans le code au sein d'un contexte d'annotations '#nullable'.
         {
             ConnectedUsers.Remove(Context.ConnectionId);
             return base.OnDisconnectedAsync(exception);

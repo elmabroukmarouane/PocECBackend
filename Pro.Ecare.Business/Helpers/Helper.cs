@@ -22,7 +22,9 @@ namespace Poc.Ecare.Business.Helpers
             return idsList;
         }
 
+#pragma warning disable CS8632 // L'annotation pour les types référence Nullable doit être utilisée uniquement dans le code au sein d'un contexte d'annotations '#nullable'.
         public static string? CreateHashPassword(string? password)
+#pragma warning restore CS8632 // L'annotation pour les types référence Nullable doit être utilisée uniquement dans le code au sein d'un contexte d'annotations '#nullable'.
         {
             if (string.IsNullOrEmpty(password)) throw new ArgumentNullException("password");
             if (string.IsNullOrWhiteSpace(password)) throw new ArgumentException("Value cannot be empty or whitespace only string.", "password");

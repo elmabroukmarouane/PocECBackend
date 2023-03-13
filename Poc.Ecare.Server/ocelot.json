@@ -1,7 +1,7 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/AccessTemp",
+      "DownstreamPathTemplate": "/api/{endpoint}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -9,11 +9,12 @@
           "Port": 63131
         }
       ],
-      "UpstreamPathTemplate": "/AccessTemp",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+      "UpstreamPathTemplate": "/{endpoint}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "Priority": 1
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:63132"
+    "BaseUrl": "http://localhost:6666"
   }
 }
