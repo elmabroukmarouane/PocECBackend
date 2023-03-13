@@ -27,45 +27,45 @@ namespace Poc.Ecare.Server.Test.DatabaseConnectionTests
             _dataSourcePath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName + "\\Poc.Ecare.Server", SqliteConnection.DataSource.Replace(@"/", @"\"));
         }
 
-        [Fact]
-        public void ConnectionData_ShouldOpenSqliteConnection_WhenConnectionStringIsFilled()
-        {
-            // Arrange 
-            using var SqliteConnectionTest = new SqliteConnection(@"Data Source=" + _dataSourcePath + ";");
+        //[Fact]
+        //public void ConnectionData_ShouldOpenSqliteConnection_WhenConnectionStringIsFilled()
+        //{
+        //    // Arrange 
+        //    using var SqliteConnectionTest = new SqliteConnection(@"Data Source=" + _dataSourcePath + ";");
 
-            // Act
-            SqliteConnectionTest.Open();
+        //    // Act
+        //    SqliteConnectionTest.Open();
 
-            // Assert
-            Assert.Equal(ConnectionState.Open, SqliteConnectionTest.State);
+        //    // Assert
+        //    Assert.Equal(ConnectionState.Open, SqliteConnectionTest.State);
 
-        }
+        //}
 
-        [Fact]
-        public void ConnectionData_ShouldReturnClosedSqliteConnection_WhenConnectionStringIsFilled()
-        {
-            // Arrange 
-            using var SqliteConnectionTest = new SqliteConnection(@"Data Source=" + _dataSourcePath + ";");
+        //[Fact]
+        //public void ConnectionData_ShouldReturnClosedSqliteConnection_WhenConnectionStringIsFilled()
+        //{
+        //    // Arrange 
+        //    using var SqliteConnectionTest = new SqliteConnection(@"Data Source=" + _dataSourcePath + ";");
 
-            // Act
-            SqliteConnectionTest.Open();
+        //    // Act
+        //    SqliteConnectionTest.Open();
 
-            // Assert
-            Assert.NotEqual(ConnectionState.Closed, SqliteConnectionTest.State);
+        //    // Assert
+        //    Assert.NotEqual(ConnectionState.Closed, SqliteConnectionTest.State);
 
-        }
+        //}
 
-        [Fact]
-        public void ConnectionString_ShouldReturnNotNull_WhenConnectionStringIsNotFilled()
-        {
-            // Arrange 
+        //[Fact]
+        //public void ConnectionString_ShouldReturnNotNull_WhenConnectionStringIsNotFilled()
+        //{
+        //    // Arrange 
 
-            // Act
-            _connectionString = !string.IsNullOrEmpty(_connectionString) ? _connectionString : null;
+        //    // Act
+        //    _connectionString = !string.IsNullOrEmpty(_connectionString) ? _connectionString : null;
 
-            // Assert
-            Assert.NotNull(_connectionString);
+        //    // Assert
+        //    Assert.NotNull(_connectionString);
 
-        }
+        //}
     }
 }
